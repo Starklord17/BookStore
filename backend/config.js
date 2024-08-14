@@ -1,3 +1,7 @@
-export const PORT = 5555;
+import dotenv from 'dotenv';
 
-export const mongoDBurl = 'mongodb+srv://maxsm:BookStore@books-store-mern.4gdfn.mongodb.net/?retryWrites=true&w=majority&appName=Books-Store-MERN';
+// Cargar las variables de entorno desde el archivo .env
+dotenv.config();
+
+export const PORT = process.env.PORT;
+export const mongoDBurl = process.env.MONGODB_URL;
